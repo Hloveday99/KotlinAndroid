@@ -1,0 +1,26 @@
+fun main() {
+    val myFirstDice = Dice(6)
+    val colorOne = "Blue"
+    println("Your ${colorOne} dice with ${myFirstDice.numSides} sides rolled ${myFirstDice.roll()}!")
+    
+    val mySecondDice = Dice(20)
+    val colorTwo = "Red"
+    println("Your ${colorTwo} dice with ${mySecondDice.numSides} sides rolled ${mySecondDice.roll()}!")
+    
+	val coinSide = Coin()
+    println("You flipped ${coinSide.flip()}")
+}
+
+class Dice (val numSides: Int) {
+
+    fun roll(): Int {
+        return (1..numSides).random()
+     }
+}
+class Coin {
+    fun flip() : String {
+        val head = "Heads"
+        val tails = "Tails"
+        return listOf(head, tails).random()    
+	 }
+}
