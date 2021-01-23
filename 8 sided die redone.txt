@@ -1,0 +1,25 @@
+fun main() {
+    val myFirstDice = Dice(8)
+	val rollResult = myFirstDice.roll()
+    val luckyNumber = 4
+    
+    when(rollResult){
+	luckyNumber -> println("You win!")
+    	1 -> println("Sorry! Your rolled a 1. Try again!")
+    	2 -> println("sadly, you rolled a 2. Try again!")
+    	3 -> println("bad luck! you rolled a 3. Try again!")
+    	4 -> println("congrats! you rolled a 4. double or nothing?")
+    	5 -> println("OOf! you rolled a 5. Try again? ")
+    	6 -> println("Don't Cry! You Rolled a 6. Try again!")
+    	7 -> println("You literally just broke physics. congrats! try again")
+        8 ->println("I bet you can't do that twice. Try again?")
+    
+    }
+}
+
+class Dice (val numSides: Int) {
+
+    fun roll(): Int {
+        return (1..numSides).random()
+     }
+}
